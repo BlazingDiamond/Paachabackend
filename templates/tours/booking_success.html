@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmed</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #0f172a; color: #e2e8f0; margin: 0; }
+        .wrap { max-width: 700px; margin: 4rem auto; padding: 2rem; background: #1e293b; border-radius: 12px; }
+        a { color: #38bdf8; }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h1>Booking Confirmed</h1>
+        {% if booking %}
+            <p>Thank you, {{ booking.full_name }}. Your booking is confirmed for {{ booking.tour.title }}.</p>
+            <p>Your tour code: <strong>{{ booking.tour_code }}</strong></p>
+            <p>Payment method: {{ booking.get_payment_gateway_display }}</p>
+        {% else %}
+            <p>Your booking was completed.</p>
+        {% endif %}
+        <p><a href="/">Return to schedule</a></p>
+    </div>
+</body>
+</html>

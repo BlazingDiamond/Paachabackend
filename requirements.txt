@@ -1,0 +1,8 @@
+django
+django-unfold
+jazzmin
+django-allauth
+django-payfast
+django-appointment
+django-q2
+psycopg2-binary
