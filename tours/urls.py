@@ -1,5 +1,6 @@
 from django.urls import path
 
+<<<<<<< HEAD
 from .views import (
     availability_api,
     booking_create_api,
@@ -16,4 +17,11 @@ urlpatterns = [
     path("api/tours/schedule/create/", schedule_create_api, name="tour-schedule-create-api"),
     path("api/tours/schedule/<int:tour_id>/", schedule_detail_api, name="tour-schedule-detail-api"),
     path("api/tours/bookings/create/", booking_create_api, name="tour-booking-create-api"),
+=======
+
+from .views import tour_data_api
+
+urlpatterns = [
+    path("api/tour-data/", tour_data_api, name="tour_data_api"),
+>>>>>>> f0bfb8c (first commit on other laptop)
 ]
